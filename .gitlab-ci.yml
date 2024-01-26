@@ -3,4 +3,6 @@ image: python:latest
 test:
   script:
     - pip install -U pytest
-    - pytest ./
+    - import runpy
+    - runpy.run_module(mod_name='pytest', run_name='__main__')
+    #- pytest ./
