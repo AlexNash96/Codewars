@@ -18,4 +18,4 @@ push:
     # - git remote add github https://oath2:$GITHUB_REPO_KEY@github.com/alexnash96/codewars
     # - git add .
     # - git commit -m "push from gitlab pipeline"
-    - git push github
+    - git push github HEAD:main
