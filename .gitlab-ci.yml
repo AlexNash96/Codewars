@@ -1,6 +1,5 @@
 image: python:latest
-stage:
-  - test
+
 test:
   script:
     - pip install -U pytest
