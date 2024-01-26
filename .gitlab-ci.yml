@@ -1,0 +1,7 @@
+image: python:latest
+stage:
+  - test
+pytest:
+  script:
+    - pip install -U pytest
+    - pytest
