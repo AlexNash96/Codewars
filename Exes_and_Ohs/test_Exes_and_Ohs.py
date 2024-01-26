@@ -6,4 +6,4 @@ def test_answer():
     answers = True,True,True,False
     for i in range(len(strings)):
         assert xo(strings[i]) == answers[i]
-    assert type(xo('xxoo')) is int
+    assert type(xo('xxoo')) is bool
