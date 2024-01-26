@@ -3,5 +3,4 @@ image: python:latest
 test:
   script:
     - pip install -U pytest
-    - import runpy
     - pytest ./
