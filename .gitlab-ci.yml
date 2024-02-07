@@ -7,16 +7,18 @@ stages:
 pytest:
   stage: test
   script:
+    - import os
     - pip install -U pytest
+    - dirs = os.listdir()
     - pytest ./
 
-push:
-  stage: deploy
-  script:
-    # - git config user.email "alexnash96@gmail.com"
-    # - git config user.name "Alex-CI"
-    # - git remote remove github
-    - git remote add github https://AlexNash96:$GITHUB_REPO_KEY@github.com/alexnash96/codewars.git
-    # - git add .
-    # - git commit -m "push from gitlab pipeline"
-    - git push github HEAD:main
+# push:
+#   stage: deploy
+#   script:
+#     # - git config user.email "alexnash96@gmail.com"
+#     # - git config user.name "Alex-CI"
+#     # - git remote remove github
+#     - git remote add github https://AlexNash96:$GITHUB_REPO_KEY@github.com/alexnash96/codewars.git
+#     # - git add .
+#     # - git commit -m "push from gitlab pipeline"
+#     - git push github HEAD:main
